@@ -1,0 +1,173 @@
+
+@import './variables'
+
+@mixin typography($color, $font-family, $font-size, $font-weight, $letter-spacing:0, $line-height: normal)
+	color: $color
+	font-family: $font-family
+	font-size: $font-size
+	font-weight: $font-weight
+	letter-spacing: $letter-spacing
+	line-height: $line-height
+
+@mixin mixed-lbl($args...)
+	@include typography($args...)
+
+// title h1
+@mixin title-h1
+	@include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-h1), var(--font-weight-5), var(--letter-spacing), var(--line-height-h1))
+
+// title h2
+@mixin title-h2
+	@include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-h2), var(--font-weight-5), var(--letter-spacing), var(--line-height-h2))
+
+// title h3
+@mixin title-h3
+    @include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-h3), var(--font-weight-4), var(--letter-spacing), var(--line-height-h3))
+
+// label-1
+@mixin label-1
+	@include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-label1), var(--font-weight-4), var(--letter-spacing), var(--line-height-label-1))
+
+// label-2
+@mixin label-2
+    @include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-label2), var(--font-weight-5), var(--letter-spacing), var(--line-height-label-2))
+
+// label-3
+@mixin label-3
+    @include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-label3), var(--font-weight-4), var(--letter-spacing), var(--line-height-label-3))
+
+// label-4
+@mixin label-4
+    @include mixed-lbl(var(--color-white), var(--sub-font), var(--font-size-label4), var(--font-weight-4), var(--letter-spacing), var(--line-height-label-4))
+
+// desc-1
+@mixin desc-1
+	@include mixed-lbl(var(--color-black-2), var(--main-font), var(--font-size-desc1), var(--font-weight-3), var(--letter-spacing), var(--line-height-desc1))
+
+// desc-2
+@mixin desc-2
+    @include mixed-lbl(var(--color-black-2), var(--main-font), var(--font-size-desc2), var(--font-weight-3), var(--letter-spacing), var(--line-height-desc2))
+
+// dollar
+@mixin dollar
+    @include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-dollar), var(--font-weight-2), var(--letter-spacing), var(--line-height-dollar))
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+a, small, strong, ul, li, form, label,
+article, footer, header, nav, section, input, textarea, button
+    &.center-text
+        text-align: center
+
+    &.left-text
+        text-align: left
+
+    &.right-text
+        text-align: right
+
+    &.cap-text
+        text-transform: capitalize
+
+    &.up-text
+        text-transform: uppercase
+
+    &.low-text
+        text-transform: lowercase
+
+
+
+// .title-h1 для заголовка h1
+// .title-h1 .weight-3 для больших надписей Why Yammy и Trusted by
+
+    &.title-h1
+        @include title-h1
+        &.weight-3
+            font-weight: var(--font-weight-3)
+
+
+
+// .desc-1 для основного текста под заголовками, список в Stage карусели, под заголовками в Features, список в карточках
+// .desc-1 .white для основного белого текста под заголовками
+
+    &.desc-1
+        @include desc-1
+        &.white
+            color: var(--color-white)
+
+
+
+// .title-h2 для заголовка h2
+// .title-h2 .white для надписи Stage и белых h2
+
+    &.title-h2
+        @include title-h2
+        &.white
+            color: var(--color-white)
+
+
+
+// .title-h3 для заголовка h3 в Features
+// .title-h3 .weight-3 для заголовка в Stage карусели
+
+    &.title-h3
+        @include title-h3
+        &.weight-3
+            font-weight: var(--font-weight-3)
+
+
+
+// .label-1 для хедера, кнопки переключения языка
+// .label-1 .white .weight-5 зелёных кнопок 
+// .label-1 .white для футера
+// .label-1 .white .weight-7 для надписи Follow us в футере
+// .label-1 .mobile для меню хедера мобайле
+
+    &.label-1
+        @include label-1
+        &.weight-5
+            font-weight: var(--font-weight-5)
+        &.weight-7
+            font-weight: var(--font-weight-7)
+        &.white
+            color: var(--color-white)
+        &.mobile
+            font-size: var(--font-size-mobile)
+            line-height: var(--line-height-mobile)
+
+
+
+
+// .label-2 для заголовка Pricing в карточках
+
+    &.label-2
+        @include label-2
+
+
+
+// .desc-2 для надписи Limited access (access с двумя с пишется) в карточках
+
+    &.desc-2
+        @include desc-2
+
+
+
+// .dollar для значка $ в карточке
+
+    &.dollar
+        @include dollar
+
+
+
+// .label-3 для числа цены в карточке
+
+    &.label-3
+        @include label-3
+
+
+
+// .label-4 для копирайта в футере
+
+    &.label-4
+        @include label-4
+
+
