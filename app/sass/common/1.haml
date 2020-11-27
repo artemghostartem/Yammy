@@ -1,0 +1,95 @@
+// .title-h1 для заголовка h1
+// .title-h1 .weight-3 для больших надписей Why Yammy и Trusted by
+
+    &.title-h1
+        @include title-h1
+        &.green
+            color: green
+        &.weight-3
+            font-weight: var(--font-weight-3)
+
+
+
+// .desc-1 для основного текста под заголовками, список в Stage карусели, под заголовками в Features, список в карточках
+// .desc-1 .white для основного белого текста под заголовками
+
+    &.desc-1
+        @include desc-1
+        &.white
+            color: var(--color-white)
+
+
+
+// .title-h2 для заголовка h2
+// .title-h2 .white для надписи Stage и белых h2
+
+    &.title-h2
+        @include title-h2
+        &.white
+            color: var(--color-white)
+
+
+
+// .title-h3 для заголовка h3 в Features
+// .title-h3 .weight-3 для заголовка в Stage карусели
+
+    &.title-h3
+        @include title-h3
+        &.weight-3
+            font-weight: var(--font-weight-3)
+
+
+
+// .label-1 для хедера, кнопки переключения языка
+// .label-1 .white .weight-5 зелёных кнопок 
+// .label-1 .white для футера
+// .label-1 .white .weight-7 для надписи Follow us в футере
+// .label-1 .mobile для меню хедера мобайле
+
+    &.label-1
+        @include label-1
+        &.weight-5
+            font-weight: var(--font-weight-5)
+        &.weight-7
+            font-weight: var(--font-weight-7)
+        &.white
+            color: var(--color-white)
+        &.mobile
+            font-size: var(--font-size-mobile)
+            line-height: var(--line-height-mobile)
+
+
+
+
+// .label-2 для заголовка Pricing в карточках
+
+    &.label-2
+        @include label-2
+
+
+
+// .desc-2 для надписи Limited access (access с двумя с пишется) в карточках
+
+    &.desc-2
+        @include desc-2
+
+
+
+// .dollar для значка $ в карточке
+
+    &.dollar
+        @include dollar
+
+
+
+// .label-3 для числа цены в карточке
+
+    &.label-3
+        @include label-3
+
+
+
+// .label-4 для копирайта в футере
+
+    &.label-4
+        @include label-4
