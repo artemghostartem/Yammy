@@ -1,5 +1,6 @@
 @import './common/vars.sass'
 @import './common/gem.scss'
+@import '../libs/owl/owl.carousel.css'
 
 *
     box-sizing: border-box
@@ -174,6 +175,7 @@ section
     &-main
         display: flex
         justify-content: space-between
+
         align-items: center
         height: gem(109)
         &-left
@@ -184,6 +186,8 @@ section
         .logo
             display: flex
             margin-right: gem(38)
+            img
+                width: gem(84)
         .menu
             display: flex
             align-items: center
@@ -237,6 +241,7 @@ section
                 height: hem(5.5)
                 transition: all 0.3s ease
                 path
+                    width: 100%
                     fill: #14121E
                     transition: all 0.3s ease
             &-menu
@@ -293,6 +298,7 @@ section
     &-main
         display: flex
         justify-content: space-between
+        align-items: flex-start
         &-text
             display: flex
             flex-direction: column
@@ -304,7 +310,68 @@ section
         &-pics
             display: flex
             width: gem(400)
-            padding-bottom: gem(180)
+            flex-direction: column
+            // padding-bottom: gem(180)
+.carousel-nav
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-right: gem(55)
+    position: relative
+    bottom: gem(75)
+    z-index: 10
+    .carousel-prev, .carousel-next
+        width: gem(57)
+        height: gem(57)
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 100%
+        background: #fff
+        cursor: pointer
+        box-shadow: gem(-4) 0 gem(20) 0 rgba(208, 208, 208, 0.3)
+        transition: all 0.3s ease
+        transform: rotate(180deg)
+        &:hover
+            box-shadow: gem(-4) 0 gem(20) 0 rgba(208, 208, 208, 0)
+        img
+            width: gem(18)
+    .carousel-next
+        margin-top: gem(13)
+        img
+            transform: rotate(-180deg)
+.owl-carousel .owl-dots
+    display: flex
+    margin-left: gem(50)
+    margin-top: gem(80)
+    .owl-dot
+        background: #fff
+        border-radius: 50%
+        width: gem(21)
+        height: gem(21)
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: gem(8)
+        transition: all 0.3s ease
+        // border: gem(10) #fff solid
+        &:last-child
+            margin-right: 0
+        &:after
+            content: ''
+            display: flex
+            background: var(--color-blue-circle)
+            width: gem(9)
+            height: gem(9)
+            border-radius: 50%
+            transition: all 0.3s ease
+            border: gem(3) #fff solid
+        &.active
+            background: var(--color-blue-circle)
+            &:after
+                background: var(--color-blue-circle-active)
+                border: gem(3) #fff solid
+
 .main_button
     display: flex
     justify-content: center

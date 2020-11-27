@@ -45,4 +45,22 @@ $(document).ready(function() {
 		})
 	}
 	
+
+	//carousel
+	let owlHero = $('.hero-carousel')	
+	owlHero.owlCarousel({
+		items: 1,
+		loop: true,
+		nav: false,
+		dots: true,
+		// autoplay: true,
+		// autoplayTimeout: 3000,
+	})
+
+	$('.carousel-prev').on('click', function () {
+		owlHero.trigger('prev.owl.carousel');
+	})
+	$('.carousel-next').on('click', function () {
+		owlHero.trigger('next.owl.carousel');
+	})
 })

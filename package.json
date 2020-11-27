@@ -28,6 +28,7 @@
 	"dependencies": {
 		"gsap": "^3.5.1",
 		"npm-check-updates": "^10.2.2",
+		"owl-carousel": "^1.0.0",
 		"reset-css": "^5.0.1",
 		"slick-carousel": "^1.8.1"
 	}
