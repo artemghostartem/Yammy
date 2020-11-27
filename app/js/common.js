@@ -46,25 +46,39 @@ $(document).ready(function() {
 	}
 	
 
-	//carousel
+	//carousel hero
 	let owlHero = $('.hero-carousel')	
 	owlHero.owlCarousel({
 		items: 1,
 		loop: true,
 		nav: false,
 		dots: true,
-		// autoplay: true,
-		// autoplayTimeout: 3000,
+		autoplay: true,
+		autoplayTimeout: 3000,
 	})
 
-	$('.carousel-prev').on('click', function () {
+	$('.opening-section .carousel-prev').on('click', function () {
 		owlHero.trigger('prev.owl.carousel');
 	})
-	$('.carousel-next').on('click', function () {
+	$('.opening-section .carousel-next').on('click', function () {
 		owlHero.trigger('next.owl.carousel');
 	})
+	// carousel crush
+	let owlCrush = $('.crush-carousel')
+	owlCrush.owlCarousel({
+		items: 3,
+		loop: false,
+		nav: false,
+		dots: false,
+		// autoplay: true,
+		// autoplayTimeout: 3000,
+		center: true
+	})
+	owlCrush.trigger('next.owl.carousel');
 
 
+
+	//marquee
 	function animateMarquee(el, duration) {
 	  const innerEl = el.querySelector('.marquee__inner');
 	  const innerWidth = innerEl.offsetWidth;
