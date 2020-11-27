@@ -129,22 +129,53 @@ section
     width: 100%
     top: 0
     left: 0
-    padding-top: gem(24)
+    // padding-top: gem(24)
+    transition: all 0.3s ease
+    .main_button
+        margin-right: gem(195)
+        height: gem(60)
+        opacity: 0
+        pointer-events: none
+        transform: translateY(gem(-10))
+        transition: all 0.3s ease
+    &.active
+        background: #fff
+        .main_button.active
+            opacity: 1
+            pointer-events: unset
+            transform: translateY(0)
+        .header-main
+            .language-active
+                background: var(--color-blue)
+            .language
+                background: var(--color-blue-lite)
+                span.label-1
+                    color: #fff
+                &-menu
+                    a
+                        color: #fff
+                svg
+                    path
+                        fill: #ffffff
     &-main
         display: flex
+        justify-content: space-between
+        align-items: center
+        height: gem(109)
+        &-left
+            display: flex
+            align-items: center
+        &-right
+            align-items: flex-start
         .logo
             display: flex
-            margin-top: gem(20)
             margin-right: gem(38)
-            width: gem(84)
-            height: gem(21)
         .menu
             display: flex
-            width: 100%
+            align-items: center
             justify-content: space-between
             &-list
                 display: flex
-                margin-top: gem(22)
                 a
                     margin: 0 gem(15)
                     transition: all ease 0.3s
@@ -155,45 +186,69 @@ section
                 a:hover
                     color: var(--color-blue)
                     transition: all ease 0.3s
-            .language
+        .language
+            right: 0
+            top: gem(25)
+            display: flex
+            position: absolute
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            width: gem(79)
+            height: gem(58)
+            border-radius: gem(30)
+            z-index: 10
+            cursor: pointer
+            background: var(--color-gray-2)
+            transition: all 0.3s ease
+            &.active
+                height: auto
+                .language-active
+                    svg
+                        transform: rotate(180deg)
+            &-active
                 display: flex
+                align-items: center
+                justify-content: center
+                width: gem(79)
+                height: gem(58)
+                border-radius: gem(30)
+                background: var(--color-white)
+                transition: all 0.3s ease
+            span
+                margin-right: gem(8)
+                transition: all 0.3s ease
+            svg
+                width: gem(10)
+                height: hem(5.5)
+                transition: all 0.3s ease
+                path
+                    fill: #14121E
+                    transition: all 0.3s ease
+            &-menu
+                display: none
                 position: relative
+                flex-direction: column
                 justify-content: center
                 align-items: center
                 width: gem(79)
-                height: gem(58)
-                background: var(--color-white)
-                border-radius: gem(100)
-                z-index: 10
-                span
-                    margin-right: gem(8)
-                img
-                    width: gem(10)
-                    height: hem(5.5)
-                &-menu
-                    display: none
-                    position: absolute
-                    flex-direction: column
-                    justify-content: center
-                    align-items: center
-                    width: gem(79)
-                    height: auto
-                    background: var(--color-gray-2)
-                    border-radius: 0 0 gem(30) gem(30)
-                    bottom: gem(-124)
-                    z-index: 5
-                    a
-                        color: black
-                        padding: gem(12) 0
-                        text-decoration: none
-                        display: flex
-                        margin-right: gem(16)
-                    a:first-child
-                        padding-top: gem(26)
-                    a:last-child
-                        padding-bottom: gem(26)
-                &-menu a:hover
-                    color: var(--color-blue)
+                height: auto
+                border-radius: 0 0 gem(30) gem(30)
+                // bottom: gem(-124)
+                // z-index: 5
+                a
+                    color: black
+                    padding: gem(12) 0
+                    text-decoration: none
+                    display: flex
+                    transition: all 0.3s ease
+                    // margin-right: gem(16)
+                a:first-child
+                    padding-top: gem(26)
+                a:last-child
+                    padding-bottom: gem(26)
+            &-menu a:hover
+                color: var(--color-blue)
 
             .language:hover
                 img
