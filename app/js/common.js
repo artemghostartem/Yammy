@@ -72,10 +72,15 @@ $(document).ready(function() {
 		dots: false,
 		// autoplay: true,
 		// autoplayTimeout: 3000,
-		center: true
+		center: false
 	})
-	owlCrush.trigger('next.owl.carousel');
 
+	$('.crush-section .carousel-prev').on('click', function () {
+		owlCrush.trigger('prev.owl.carousel');
+	})
+	$('.crush-section .carousel-next').on('click', function () {
+		owlCrush.trigger('next.owl.carousel');
+	})
 
 
 	//marquee
