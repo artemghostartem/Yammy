@@ -36,5 +36,11 @@
   ".crush-main-text h2": {
     "big-text": "Give your remote reps the tools to ",
     "underlined": "crush it."
+  },
+  ".crush-main-text": {
+    "crush-desc": "In one web-based application, your remote reps access leads, view scripts, make calls, send emails, and report outcomes. No spending big bucks on calling infrastructure. You improve accountability while raising profits."
+  },
+  ".crush-bottom-title": {
+    "stage": "Stage"
   }
 }

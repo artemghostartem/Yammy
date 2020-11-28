@@ -98,6 +98,7 @@ input , textarea
 button[type='submit']
     cursor: pointer
 
+
 @media only screen and (max-width : 1024px)
     .s-hidden
         display: none
@@ -116,8 +117,13 @@ button[type='submit']
 
     .xxs-hidden
         display: none
-
-
+@media only screen and (min-width : 1400px)
+    .crush-carousel
+        width: 100%
+        .owl-stage-outer
+            width: 100%
+            .owl-stage
+                left: gem(240) !important
 
 //start here
 img
@@ -290,7 +296,7 @@ section
         top: 0
         background: var(--color-blue)
         background-size: cover
-        width: gem(342)
+        width: 35.5%
         height: gem(810)
     &-dots
         position: absolute
@@ -511,7 +517,7 @@ section
             margin-top: gem(20)
             margin-bottom: gem(8)
     &-carousel  
-        width: gem(1200)
+        // width: gem(1200)
         &-circle
             display: flex
             width: gem(57)
@@ -539,7 +545,7 @@ section
         top: 0
         background: url(../img/brilliant-bgr.png) no-repeat
         background-size: cover
-        width: gem(456)
+        width: 40%
         height: gem(493)
     &-main
         display: flex
