@@ -52,6 +52,10 @@
 @mixin dollar
     @include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-dollar), var(--font-weight-2), var(--letter-spacing), var(--line-height-dollar))
 
+    // circle
+@mixin circle
+    @include mixed-lbl(var(--color-black-1), var(--sub-font), var(--font-size-circle), var(--font-weight-5), var(--letter-spacing), var(--line-height-circle))
+
 html, body, div, span,
 h1, h2, h3, h4, h5, h6, p, blockquote,
 a, small, strong, ul, li, form, label,
@@ -122,3 +126,7 @@ article, footer, header, nav, section, input, textarea, button
 
     &.label-4
         @include label-4
+    &.circle
+        @include circle
+        &.white
+            color: var(--color-white)

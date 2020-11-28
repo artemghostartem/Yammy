@@ -24,32 +24,51 @@
 <body>
     <!-- Start here -->
     <header class="header">
+        <div class="menu_mobile">
+            <div class="container">
+                <div class="menu_mobile-main">
+                    <div class="menu_mobile-main-list">
+                        <a href="#" class="label-1">Home</a>
+                        <a href="#" class="label-1">Product</a>
+                        <a href="#" class="label-1">Pricing</a>
+                        <a href="#" class="label-1">About</a>
+                    </div>
+                    <a class="footer-main-top-social">
+                        <img src="img/footer-social.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="header-main">
                 <div class="header-main-left">
                     <a class="logo" href="#"><img src="img/logo.svg" alt=""></a>
                     <div class="menu">
                         <div class="menu-list">
-                            <a href="#" class="label-1">Home</a>
-                            <a href="#" class="label-1">Product</a>
-                            <a href="#" class="label-1">Pricing</a>
-                            <a href="#" class="label-1">About</a>
+                            <a href="#" class="label-1 mobile">Home</a>
+                            <a href="#" class="label-1 mobile">Product</a>
+                            <a href="#" class="label-1 mobile">Pricing</a>
+                            <a href="#" class="label-1 mobile">About</a>
                         </div>
-                    </div>
-                </div>
-                <div class="header-main-right">
-                    <a class="main_button">
+                        <a class="main_button">
                             <span class="label-1 white weight-5">
                                 Get started free
                             </span>
                         </a>
+                    </div>
+                </div>
+                <div class="header-main-right">
+                    <a class="main_button">
+                        <span class="label-1 white weight-5">
+                            Get started free
+                        </span>
+                    </a>
                     <div class="language">
                         <div class="language-active">
                             <span class="label-1">EN</span>
                             <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.27442 5.58631L9.88692 0.961018C10.038 0.809476 10.0377 0.564125 9.88614 0.412837C9.73459 0.261666 9.48911 0.262056 9.33795 0.413618L4.99998 4.7636L0.662031 0.413462C0.51086 0.26192 0.265529 0.261529 0.113967 0.412681C0.0379906 0.48852 1.90735e-06 0.587875 1.90735e-06 0.68723C1.90735e-06 0.786332 0.0377369 0.885296 0.113186 0.960999L4.72557 5.58631C4.79819 5.6593 4.89701 5.70026 4.99998 5.70026C5.10295 5.70026 5.20166 5.65918 5.27442 5.58631Z" fill="#14121E"/>
+                                <path d="M5.27442 5.58631L9.88692 0.961018C10.038 0.809476 10.0377 0.564125 9.88614 0.412837C9.73459 0.261666 9.48911 0.262056 9.33795 0.413618L4.99998 4.7636L0.662031 0.413462C0.51086 0.26192 0.265529 0.261529 0.113967 0.412681C0.0379906 0.48852 1.90735e-06 0.587875 1.90735e-06 0.68723C1.90735e-06 0.786332 0.0377369 0.885296 0.113186 0.960999L4.72557 5.58631C4.79819 5.6593 4.89701 5.70026 4.99998 5.70026C5.10295 5.70026 5.20166 5.65918 5.27442 5.58631Z" fill="#14121E" />
                             </svg>
-
                         </div>
                         <div class="language-menu">
                             <a href="#" class="label-1">RU</a>
@@ -57,6 +76,9 @@
                             <a href="#" class="label-1">RU</a>
                         </div>
                     </div>
+                    <a class="burger popup-with-move-anim" href="#menu">
+                        <span class="burger-line"></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -104,7 +126,7 @@
         </section>
         <section class="decor-section">
             <div id="marquee1" class="marquee">
-                    <div class="marquee__inner"><span class="title-h1 weight-3">Why Yammy</span><span class="title-h1 weight-3">Why Yammy</span><span class="title-h1 weight-3">Why Yammy</span></div>
+                <div class="marquee__inner"><span class="title-h1 weight-3">Why Yammy</span><span class="title-h1 weight-3">Why Yammy</span><span class="title-h1 weight-3">Why Yammy</span></div>
             </div>
         </section>
         <section class="crush-section">
@@ -113,7 +135,7 @@
                 <div class="crush-main">
                     <div class="crush-main-top">
                         <div class="crush-main-text">
-                            <h2 class="title-h2 underlined_text" >
+                            <h2 class="title-h2 underlined_text">
                                 Give your remote reps the
                                 tools to <span>crush it.</span>
                             </h2>
@@ -126,27 +148,56 @@
                             <div class="crush-main-pics-small"><img src="img/crush-screen-2.png" alt=""></div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="crush-bottom">
                 <div class="container">
-                     <h2 class="title-h2 white">
+                    <h2 class="title-h2 white">
                         Stage
                     </h2>
                 </div>
                 <div class="crush-carousel owl-carousel">
                     <div class="crush-item">
-                        Lorem ipsum d
+                        <div class="crush-carousel-circle">
+                            <span class="circle white">1</span>
+                        </div>
+                        <h3 class="title-h3">Check in</h3>
+                        <ul class="crush-carousel-list">
+                            <li class="desc-1">- a cafe</li>
+                            <li class="desc-1">- personnel</li>
+                        </ul>
                     </div>
                     <div class="crush-item">
-                        Lorem ipsum d
+                        <div class="crush-carousel-circle">
+                            <span class="circle white">2</span>
+                        </div>
+                        <h3 class="title-h3">Creating an
+                            electronic menu</h3>
+                        <ul class="crush-carousel-list">
+                            <li class="desc-1"></li>
+                            <li class="desc-1"></li>
+                        </ul>
                     </div>
                     <div class="crush-item">
-                        Lorem ipsum d
+                        <div class="crush-carousel-circle">
+                            <span class="circle white">3</span>
+                        </div>
+                        <h3 class="title-h3">Publishing
+                            a menu</h3>
+                        <ul class="crush-carousel-list">
+                            <li class="desc-1"></li>
+                            <li class="desc-1"></li>
+                        </ul>
                     </div>
                     <div class="crush-item">
-                        Lorem ipsum d
+                        <div class="crush-carousel-circle">
+                            <span class="circle white">4</span>
+                        </div>
+                        <h3 class="title-h3">Ready site with menu and order processing</h3>
+                        <ul class="crush-carousel-list">
+                            <li class="desc-1"></li>
+                            <li class="desc-1"></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -270,7 +321,7 @@
             <div class="sponsors-section-text">
                 <div id="marquee2" class="marquee">
                     <div class="marquee__inner"><span class="title-h1 weight-3">Trusted by</span><span class="title-h1 weight-3">Trusted by</span><span class="title-h1 weight-3">Trusted by</span></div>
-                    </div>
+                </div>
             </div>
             <div class="sponsors-section-pics">
                 <img src="img/sponsor-1.png" alt="">
@@ -282,7 +333,7 @@
         <section class="free-section">
             <div class="free-bgr"></div>
             <h2 class="title-h2 white">Share what you know.<br>
-                Sign up free today.</h2>
+                Sign up <span>free today.</span></h2>
             <a class="main_button">
                 <span class="label-1 white weight-5">
                     Get started free
@@ -316,9 +367,9 @@
                         </div>
                     </div>
                     <div class="works-main-text">
-                        <h2 class="title-h2 white">
-                            Yammy is where<br>
-                            remote works.
+                        <h2 class="title-h2 white underlined_text">
+                            Yammy is where
+                            <br>remote <span>works.</span>
                         </h2>
                         <p class="desc-1 white">
                             Yammy is on a mission to remove any obstacles to working remotely. We provide the platform to hire the best sales experts, engage and maintain amazing customer relationships, and effectively manage remote teams from anywhere in the world.
@@ -339,7 +390,7 @@
                     <div class="works2-main-text">
                         <h2 class="title-h2 underlined_text">
                             Yammy is where
-                            <br><span>remote</span> works.
+                            <br>remote <span>works.</span>
                         </h2>
                         <p class="desc-1">
                             Yammy is on a mission to remove any obstacles to working remotely. We provide the platform to hire the best sales experts, engage and maintain amazing customer relationships, and effectively manage remote teams from anywhere in the world.
@@ -353,7 +404,7 @@
                 <div class="footer-main">
                     <div class="footer-main-top">
                         <div class="footer-main-top-logo">
-                            <img src="img/footer.png" alt="">
+                            <img src="img/footer.svg" alt="">
                         </div>
                         <div class="footer-main-top-menu">
                             <a href="#" class="label-1 white">Home</a>
@@ -362,7 +413,7 @@
                             <a href="#" class="label-1 white">About</a>
                         </div>
                         <a class="footer-main-top-social">
-                            <img src="img/footer-social.png" alt="">
+                            <img src="img/footer-social.svg" alt="">
                         </a>
                     </div>
                     <p class="footer-copyright label-4">Copyright © 2020, Yammy.
