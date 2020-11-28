@@ -144,4 +144,13 @@ $(document).ready(function() {
 
     animateMarquee(marquee1, 30000);
     animateMarquee(marquee2, 30000);
+
+    getLanguage();
+
+    $('.language-menu a').on('click',function () {
+		event.preventDefault()
+		let language = this.dataset.language
+		setLanguage(language);
+    })
+
 })

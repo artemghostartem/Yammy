@@ -1,0 +1,40 @@
+{
+  "head": {
+    "title": "Yammy вебсайт"
+  },
+  ".language-active": {
+    "current-language": "RU"
+  },
+  ".menu-list": {
+    "home": "Главная",
+    "product": "Продукт",
+    "pricing": "Цены",
+    "about": "О нас"
+  },
+  ".menu_mobile-main-list": {
+    "home": "Главная",
+    "product": "Продукт",
+    "pricing": "Цены",
+    "about": "О нас"
+  },
+  "h1": {
+    "h1-big": "Должен был быть способ получше. И мы его ",
+    "underlined": "создали."
+  },
+  ".opening-main-text": {
+    "home-desc": "Преобразуйте свои продажи с помощью платформы для онлайн-продаж, взаимодействия с клиентами и обеспечения подотчетности своих представителей."
+  },
+  ".main_button": {
+    "button-text": "Начать бесплатно",
+    "buy": "Заказать"
+  },
+  ".marquee__inner": {
+    "why_yammy": "Почему Yammy",
+    "trusted_by": "Нам доверяют"
+  },
+
+  ".crush-main-text h2": {
+    "big-text": "Даем вам инструменты для",
+    "underlined": "улучшения"
+  }
+}

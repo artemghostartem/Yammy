@@ -1,0 +1,40 @@
+{
+  "head": {
+    "title": "Yammy Webpage"
+  },
+  ".language-active": {
+    "current-language": "EN"
+  },
+  ".menu-list": {
+    "home": "Home",
+    "product": "Product",
+    "pricing": "Pricing",
+    "about": "About"
+  },
+  ".menu_mobile-main-list": {
+    "home": "Home",
+    "product": "Product",
+    "pricing": "Pricing",
+    "about": "About"
+  },
+  "h1": {
+    "h1-big": "There had to be a better way. So we ",
+    "underlined": "built it."
+  },
+  ".opening-main-text": {
+    "home-desc": "Transform your sales with the platform for online sales , engaging with customers, and holding your reps accountable."
+  },
+  ".main_button": {
+    "button-text": "Get started free",
+    "buy": "Get started"    
+  },
+  ".marquee__inner": {
+    "why_yammy": "Why Yammy",
+    "trusted_by": "Trusted By"
+  },
+
+  ".crush-main-text h2": {
+    "big-text": "Give your remote reps the tools to ",
+    "underlined": "crush it."
+  }
+}
