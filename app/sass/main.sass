@@ -765,12 +765,32 @@ section
             &-main
                 display: flex
                 flex-direction: column
+                align-items: center
                 &-list
                     display: flex
                     flex-direction: column
                     align-items: center
                     a
                         margin-bottom: gem(30)
+                &-main_button
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    background: var(--color-green)
+                    width: gem(228)
+                    height: gem(70)
+                    border-radius: gem(100)
+                    transition: all ease 0.3s
+                    cursor: pointer
+                    box-shadow: 0 gem(4) gem(25) rgba(49, 197, 161, 0.5)
+                    margin-top: gem(177)
+                &-main_button:hover
+                    background: var(--color-green-active)
+                    transition: all ease 0.3s
+                &-social
+                    display: flex
+                    width: gem(133)
+                    margin-top: gem(100)
 
         .burger
             display: flex
