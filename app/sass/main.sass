@@ -447,6 +447,21 @@ section
                     .crush-item
                         background: none
                         box-shadow: none
+    &-progress-bar
+        width: 88%
+        margin: auto
+        margin-top: gem(12)
+        .grey-line
+            width: 100%
+            height: gem(2)
+            background: #ECEDEF
+        .blue-line
+            background: #27A8FC
+            width: 0%
+            height: gem(2)
+            position: relative
+            top: gem(2)
+            transition: all 0.5s ease
     &-main
         display: flex
         &-top
@@ -783,12 +798,10 @@ section
             align-items: center
             &-logo
                 display: flex
-                // margin-right: gem(231)
                 width: gem(84)
                 height: gem(21)
             &-menu
                 display: flex
-                // margin-right: gem(181)
                 margin-left: gem(50)
                 a
                     margin: 0 gem(15)
@@ -805,9 +818,6 @@ section
                 flex-direction: row
                 justify-content: flex-end
                 align-items: flex-end
-
-                // width: gem(133)
-                // height: gem(21)
                 a
                     display: flex
                     margin-left: gem(10)
