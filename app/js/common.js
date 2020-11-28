@@ -1,15 +1,20 @@
 $(document).ready(function() {
-
+let header = $('header')
+    let mainScreen = $('.opening-section')  
     $(window).on('scroll', function() {
-        headerSticky()
+        if (window.innerWidth > 768) {
+            headerSticky()
+        } else {
+            header.addClass('active')
+        }
+        
     })
 
     // header functions
-
+    
     function headerSticky() {
 
-        let header = $('header')
-        let mainScreen = $('.opening-section')
+        
         let headerOffsetTop = header.offset().top
         let mainScreenHeight = mainScreen.height()
 
@@ -73,7 +78,15 @@ $(document).ready(function() {
         center: false,
         mouseDrag: false,
         touchDrag: false,
-        pullDrag: false
+        pullDrag: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 3
+            }
+        }
     })
 
 
@@ -83,9 +96,14 @@ $(document).ready(function() {
     let progressBarLine = document.querySelector('.blue-line')
     let owlChildrens = document.querySelectorAll('.crush-carousel .owl-item')
     let owlChildrensLength = owlChildrens.length
-
+    let actives = 2
+    if (window.innerWidth > 768) {
+        actives = 2
+    } else {
+        actives = 1
+    }
     function progressBar() {
-        let initialwith = 100 / (owlChildrens.length - 2)
+        let initialwith = 100 / (owlChildrens.length - actives)
         let newWidth = initialwith * j
         progressBarLine.style.width = `${newWidth}%`
     }
@@ -93,17 +111,19 @@ $(document).ready(function() {
     progressBar()
 
     $('.crush-section .carousel-prev').on('click', function() {
-        owlCrush.trigger('prev.owl.carousel');
+        
         if (j > 1) {
         	j--
         	progressBar()
+            owlCrush.trigger('prev.owl.carousel');
         }
     })
     $('.crush-section .carousel-next').on('click', function() {
-        owlCrush.trigger('next.owl.carousel');
-        if (j < (owlChildrens.length - 2)) {
+        
+        if (j < (owlChildrens.length - actives)) {
             j++
             progressBar()
+            owlCrush.trigger('next.owl.carousel');
         }
     })
 
@@ -145,6 +165,8 @@ $(document).ready(function() {
     animateMarquee(marquee1, 30000);
     animateMarquee(marquee2, 30000);
 
+
+    // multilanguages
     getLanguage();
 
     $('.language-menu a').on('click',function () {
@@ -153,4 +175,12 @@ $(document).ready(function() {
 		setLanguage(language);
     })
 
+    //pagescroll2id
+    $("a[rel='m_PageScroll2id']").mPageScroll2id();
+    //mobile-menu
+    $('.burger , .header .menu_mobile-main-list a').on('click',function () {
+        event.preventDefault();
+        $('.burger').toggleClass('active')
+        $('.menu_mobile').toggleClass('active')
+    })
 })

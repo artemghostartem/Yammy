@@ -143,7 +143,7 @@ section
             width: 100%
             background: var(--color-green)
             height: gem(7)
-            bottom: gem(12)
+            bottom: gem(10)
             z-index: -1
 .header
     position: fixed
@@ -352,6 +352,7 @@ section
         margin-top: gem(13)
         img
             transform: rotate(-180deg)
+
 .owl-carousel .owl-dots
     display: flex
     margin-left: gem(50)
@@ -566,7 +567,7 @@ section
             height: gem(319)
 .features
     &-section
-       padding-top: gem(90)
+       padding-top: gem(50)
        background: var(--color-gray-1) no-repeat
     // &-bgr
     //     position: absolute
@@ -583,8 +584,8 @@ section
         &-element
             display: flex
             flex-direction: column
-            max-width: gem(230)
-            margin-bottom: gem(90)
+            width: gem(230)
+            margin-bottom: gem(36)
             img
                 width: gem(57)
             span
@@ -738,18 +739,6 @@ section
             max-width: gem(377)
             h2
                 max-width: gem(271)
-                span
-                    display: inline-block
-                    position: relative
-                    &:after
-                        display: flex
-                        position: absolute
-                        content: ''
-                        width: 100%
-                        background: var(--color-green)
-                        height: gem(7)
-                        bottom: gem(12)
-                        z-index: -1
             p
                 display: flex
                 margin-top: gem(26)
@@ -835,7 +824,7 @@ section
         max-width: gem(121)
         text-align: center
 @media all and (max-width: 768px)
-    .underlined_text span:after
+    .underlined_text span.unde_line:after
         bottom: gem(4)
     .header
         padding: gem(40) 0
@@ -844,14 +833,23 @@ section
             position: fixed
             left: -100%
             width: 100%
-            padding-top: gem(80)
-            // left: -100%
+            // padding-top: gem(80)
+            top: 0
             background: var(--color-white)
             height: 100vh
+            transition: all 0.3s ease
+            flex-direction: column
+            align-items: center
+            justify-content: center
+
+            &.active
+                left: 0
             &-main
                 display: flex
                 flex-direction: column
                 align-items: center
+                height: gem(450)  
+                justify-content: space-between
                 &-list
                     display: flex
                     flex-direction: column
@@ -869,20 +867,29 @@ section
                     transition: all ease 0.3s
                     cursor: pointer
                     box-shadow: 0 gem(4) gem(25) rgba(49, 197, 161, 0.5)
-                    margin-top: gem(177)
+                    // margin-top: gem(177)
                 &-main_button:hover
                     background: var(--color-green-active)
                     transition: all ease 0.3s
                 &-social
                     display: flex
                     width: gem(133)
-                    margin-top: gem(100)
+                    // margin-top: gem(100)
 
         .burger
             display: flex
             width: gem(40)
             height: gem(22)
             transition: all 0.3s ease
+            &.active
+                .burger-line
+                    transform: rotate(45deg)
+                    &:before
+                        transform: rotate(90deg)
+                        margin-top: gem(-9)
+                    &:after
+                        transform: rotate(45deg)
+                        opacity: 0
             &-line
                 background: var(--color-black-1)
                 display: block
@@ -929,6 +936,8 @@ section
                 display: none
             span
                 margin-right: 0
+                &.label-1
+                    font-size: gem(10)
         .language
             background: var(--color-blue)
             top: gem(-1)
@@ -936,8 +945,10 @@ section
         .language-menu
             width: gem(30)
             background: var(--color-blue-lite)
+            a.label-1
+                font-size: gem(10)
     .header.active
-        display: none
+        // display: none
     .header-main .logo
         width: gem(68)
     .opening
@@ -947,7 +958,7 @@ section
             width: gem(132)
             height: gem(520)
             top: unset
-            bottom: gem(-124)
+            bottom: gem(50)
         &-main
             flex-direction: column
             &-text
@@ -955,19 +966,24 @@ section
                 margin-bottom: gem(55)
                 h1, p
                     text-align: center
+                p
+                    margin-top: gem(30)
+                    margin-bottom: gem(55)
             &-pics
                 width: gem(327)
-                height: gem(367)
+                height: auto
         &-dots
             display: none
     .decor-section
-        margin-top: gem(200)
-        margin-bottom: gem(30)
+        margin-top: gem(-5)
+        margin-bottom: gem(5)
     .crush-bgr
         width: gem(375)
         height: gem(560)
         top: unset
-        bottom: gem(-124)
+        bottom: gem(-115)
+        background-image: url(../img/bgr-crush-mobile.png)
+        
     .crush-main
         &-top
             flex-direction: column
@@ -980,14 +996,26 @@ section
         &-pics
             width: gem(321)
             height: gem(181)
+            top: gem(-85)
             &-small
                 width: gem(98)
                 height: gem(195)
-                right: gem(-8)
+                right: gem(0)
                 top: gem(75)
+    .crush-bottom
+        margin-top: gem(47)
+    .crush-section .carousel-nav
+        right: 0
+    .crush-bottom .crush-carousel
+        margin-top: gem(35)
     .owl-carousel .owl-dots
         margin-top: gem(50)
         margin-left: gem(70)
+    .crush-bottom .owl-carousel .owl-stage
+        left: unset
+    .crush-progress-bar
+        width: 100%
+        margin-top: gem(-20)
     .carousel-nav
         margin-right: 0
         margin-left: gem(110)
@@ -998,6 +1026,7 @@ section
     .brilliant
         &-section
             height: auto
+            margin-top: gem(251)
         &-bgr
             width: gem(243)
             height: gem(278)
@@ -1008,6 +1037,7 @@ section
             &-text
                 align-items: center
                 margin-bottom: gem(55)
+                margin-left: 0
                 h2, p
                     text-align: center
                 p

@@ -25,35 +25,43 @@
     <!-- Start here -->
     <header class="header">
         <div class="menu_mobile">
-            <div class="container">
+
                 <div class="menu_mobile-main">
                     <div class="menu_mobile-main-list">
-                        <a href="#" class="label-1 mobile">Home</a>
-                        <a href="#" class="label-1 mobile">Product</a>
-                        <a href="#" class="label-1 mobile">Pricing</a>
-                        <a href="#" class="label-1 mobile">About</a>
+                        <a href="#home" class="label-1 mobile" rel='m_PageScroll2id' key="home">Home</a>
+                        <a href="#product" class="label-1 mobile" rel='m_PageScroll2id' key="product">Product</a>
+                        <a href="#pricing" class="label-1 mobile" rel='m_PageScroll2id' key="pricing">Pricing</a>
+                        <a href="#about" class="label-1 mobile" rel='m_PageScroll2id' key="about">About</a>
                     </div>
                     <a class="menu_mobile-main-main_button">
                         <span class="label-1 white weight-5" key="button-text">
                             Get started free
                         </span>
                     </a>
-                    <a class="menu_mobile-main-social">
-                        <img src="img/mobile-menu-social.svg" alt="">
-                    </a>
+                    <div class="footer-main-top-social">
+                            <p class="label-1 weight-7 blue" key="follow_us">
+                                Follow us:
+                            </p>
+                            <a href="#">
+                                <img src="img/linked-blue.svg">
+                            </a>
+                            <a href="#">
+                                <img src="img/twitter-blue.svg" alt="">
+                            </a>
+                        </div>
                 </div>
-            </div>
+            
         </div>
         <div class="container">
             <div class="header-main">
                 <div class="header-main-left">
-                    <a class="logo" href="#"><img src="img/logo.svg" alt=""></a>
+                    <a class="logo" href="#home" rel='m_PageScroll2id'><img src="img/logo.svg" alt=""></a>
                     <div class="menu">
                         <div class="menu-list">
-                            <a href="#" class="label-1" key="home">Home</a>
-                            <a href="#" class="label-1" key="product">Product</a>
-                            <a href="#" class="label-1" key="pricing">Pricing</a>
-                            <a href="#" class="label-1" key="about">About</a>
+                            <a href="#home" class="label-1" rel='m_PageScroll2id' key="home">Home</a>
+                            <a href="#product" class="label-1" rel='m_PageScroll2id' key="product">Product</a>
+                            <a href="#pricing" class="label-1" rel='m_PageScroll2id' key="pricing">Pricing</a>
+                            <a href="#about" class="label-1" rel='m_PageScroll2id' key="about">About</a>
                         </div>
                         <!-- <a class="main_button">
                             <span class="label-1 white weight-5">
@@ -80,7 +88,7 @@
                             <a href="#" class="label-1" data-language="en">EN</a>
                         </div>
                     </div>
-                    <a class="burger popup-with-move-anim" href="#menu">
+                    <a class="burger">
                         <span class="burger-line"></span>
                     </a>
                 </div>
@@ -88,7 +96,7 @@
         </div>
     </header>
     <main>
-        <section class="opening-section">
+        <section class="opening-section" id="home">
             <div class="opening-bgr"></div>
             <div class="opening-dots">
                 <img src="img/dots.svg" alt="">
@@ -128,7 +136,7 @@
                 </div>
             </div>
         </section>
-        <section class="decor-section">
+        <section class="decor-section" id="product">
             <div id="marquee1" class="marquee">
                 <div class="marquee__inner"><span class="title-h1 weight-3" key="why_yammy">Why Yammy</span><span class="title-h1 weight-3" key="why_yammy">Why Yammy</span><span class="title-h1 weight-3" key="why_yammy">Why Yammy</span></div>
             </div>
@@ -177,17 +185,17 @@
                         <div class="crush-carousel-circle">
                             <span class="circle white">1</span>
                         </div>
-                        <h3 class="title-h3">Check in</h3>
+                        <h3 class="title-h3" key="check-in">Check in</h3>
                         <ul class="crush-carousel-list">
-                            <li class="desc-1">- a cafe</li>
-                            <li class="desc-1">- personnel</li>
+                            <li class="desc-1" key="a_cafe">- a cafe</li>
+                            <li class="desc-1" key="a_personal">- personnel</li>
                         </ul>
                     </div>
                     <div class="crush-item">
                         <div class="crush-carousel-circle">
                             <span class="circle white">2</span>
                         </div>
-                        <h3 class="title-h3">Creating an
+                        <h3 class="title-h3" key="create-menu">Creating an
                             electronic menu</h3>
                         <ul class="crush-carousel-list">
                             <li class="desc-1"></li>
@@ -198,7 +206,7 @@
                         <div class="crush-carousel-circle">
                             <span class="circle white">3</span>
                         </div>
-                        <h3 class="title-h3">Publishing
+                        <h3 class="title-h3" key="publishing_a_menu">Publishing
                             a menu</h3>
                         <ul class="crush-carousel-list">
                             <li class="desc-1"></li>
@@ -209,7 +217,7 @@
                         <div class="crush-carousel-circle">
                             <span class="circle white">4</span>
                         </div>
-                        <h3 class="title-h3">Ready site with menu and order processing</h3>
+                        <h3 class="title-h3" key="ready_website">Ready site with menu and order processing</h3>
                         <ul class="crush-carousel-list">
                             <li class="desc-1"></li>
                             <li class="desc-1"></li>
@@ -234,12 +242,12 @@
                 <div class="brilliant-main">
                     <div class="brilliant-main-text">
                         <h2 class="title-h2 underlined_text">
-                            Manage<br>
+                            <span key="big_text">Manage<br>
                             Remote
                             <br>
-                            Reps <span>Brilliantly.</span>
+                            Reps </span><span class="unde_line" key="underlined">Brilliantly.</span>
                         </h2>
-                        <p class="desc-1">
+                        <p class="desc-1" key="brilliant-desc">
                             Take the hassle out of remote workforce management with features to manage intelligently.
                         </p>
                     </div>
@@ -255,54 +263,54 @@
                 <div class="features-main">
                     <div class="features-main-element">
                         <img src="img/features-icon.svg" alt="">
-                        <span class="title-h3">Features 1</span>
-                        <p class="desc-1">Take the hassle out of remote workforce management with features to manage intelligently.</p>
+                        <span class="title-h3" key="feature-one">Features 1</span>
+                        <p class="desc-1" key="feature-one-desc">Take the hassle out of remote workforce management with features to manage intelligently.</p>
                     </div>
                     <div class="features-main-element">
                         <img src="img/features-icon.svg" alt="">
-                        <span class="title-h3">Features 1</span>
-                        <p class="desc-1">Take the hassle out of remote workforce management with features to manage intelligently.</p>
+                        <span class="title-h3" key="feature-two">Features 1</span>
+                        <p class="desc-1" key="feature-two-desc">Take the hassle out of remote workforce management with features to manage intelligently.</p>
                     </div>
                     <div class="features-main-element">
                         <img src="img/features-icon.svg" alt="">
-                        <span class="title-h3">Features 1</span>
-                        <p class="desc-1">Take the hassle out of remote workforce management with features to manage intelligently.</p>
+                        <span class="title-h3" key="feature-three">Features 1</span>
+                        <p class="desc-1" key="feature-three-desc">Take the hassle out of remote workforce management with features to manage intelligently.</p>
                     </div>
                     <div class="features-main-element">
                         <img src="img/features-icon.svg" alt="">
-                        <span class="title-h3">Features 1</span>
-                        <p class="desc-1">Take the hassle out of remote workforce management with features to manage intelligently.</p>
+                        <span class="title-h3" key="feature-four">Features 1</span>
+                        <p class="desc-1" key="feature-four-desc">Take the hassle out of remote workforce management with features to manage intelligently.</p>
                     </div>
                     <div class="features-main-element">
                         <img src="img/features-icon.svg" alt="">
-                        <span class="title-h3">Features 1</span>
-                        <p class="desc-1">Take the hassle out of remote workforce management with features to manage intelligently.</p>
+                        <span class="title-h3" key="feature-five">Features 1</span>
+                        <p class="desc-1" key="feature-five-desc">Take the hassle out of remote workforce management with features to manage intelligently.</p>
                     </div>
                     <div class="features-main-element">
                         <img src="img/features-icon.svg" alt="">
-                        <span class="title-h3">Features 1</span>
-                        <p class="desc-1">Take the hassle out of remote workforce management with features to manage intelligently.</p>
+                        <span class="title-h3" key="feature-six">Features 1</span>
+                        <p class="desc-1" key="feature-six-desc">Take the hassle out of remote workforce management with features to manage intelligently.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="everything-section">
+        <section class="everything-section" id="pricing">
             <div class="everything-bgr"></div>
             <div class="container">
                 <div class="everything-main">
-                    <h2 class="title-h2 underlined_text">What do you get?
-                        <br><span>Everything</span>
+                    <h2 class="title-h2 underlined_text"> <span key="big_text">What do you get?</span>
+                        <br><span class="unde_line" key="underlined">Everything</span>
                     </h2>
                     <div class="everything-main-cards">
                         <div class="everything-main-cards-element">
-                            <span class="label-2">Pricing 1</span>
-                            <span class="desc-2">Limited access</span>
+                            <span class="label-2" key="price-one">Pricing 1</span>
+                            <span class="desc-2" key="limitted">Limited access</span>
                             <span class="label-3 price">100</span>
                             <ul class="everything-main-cards-element-list">
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
                             </ul>
                             <a class="main_button">
                                 <span class="label-1 white weight-5" key="buy">
@@ -311,14 +319,14 @@
                             </a>
                         </div>
                         <div class="everything-main-cards-element">
-                            <span class="label-2">Pricing 1</span>
-                            <span class="desc-2">Limited access</span>
+                            <span class="label-2" key="price-two">Pricing 1</span>
+                            <span class="desc-2" key="limitted">Limited access</span>
                             <span class="label-3 price">100</span>
                             <ul class="everything-main-cards-element-list">
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
                             </ul>
                             <a class="main_button">
                                 <span class="label-1 white weight-5" key="buy">
@@ -327,14 +335,14 @@
                             </a>
                         </div>
                         <div class="everything-main-cards-element">
-                            <span class="label-2">Pricing 1</span>
-                            <span class="desc-2">Limited access</span>
+                            <span class="label-2" key="price-three">Pricing 1</span>
+                            <span class="desc-2" key="limitted">Limited access</span>
                             <span class="label-3 price">100</span>
                             <ul class="everything-main-cards-element-list">
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
-                                <li class="desc-1">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list">- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list" >- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list" >- Take the hassle out of</li>
+                                <li class="desc-1" key="card_list" >- Take the hassle out of</li>
                             </ul>
                             <a class="main_button">
                                 <span class="label-1 white weight-5"  key="buy">
@@ -366,24 +374,24 @@
         </section>
         <section class="free-section">
             <div class="free-bgr"></div>
-            <h2 class="title-h2 white underlined_text">Share what you know.<br>
-                Sign up <span>free today.</span></h2>
+            <h2 class="title-h2 white underlined_text"> <span key="big_text">Share what you know.
+                Sign up</span> <br><span class="unde_line" key="underlined">free today.</span></h2>
             <a class="main_button">
                 <span class="label-1 white weight-5" key="button-text">
                     Get started free
                 </span>
             </a>
         </section>
-        <section class="remote-section">
+        <section class="remote-section" id="about">
             <div class="container">
                 <div class="remote-main">
                     <div class="remote-main-text">
                         <h2 class="title-h2 underlined_text">
-                            Yammy is where
+                            <span key="big_text">Yammy is where remote</span>
                             <br>
-                            <span>remote</span> works.
+                            <span class="unde_line" key="underlined">works.</span>
                         </h2>
-                        <p class="desc-1">
+                        <p class="desc-1" key="remote-desc">
                             Yammy is on a mission to remove any obstacles to working remotely. We provide the platform to hire the best sales experts, engage and maintain amazing customer relationships, and effectively manage remote teams from anywhere in the world.
                         </p>
                     </div>
@@ -402,10 +410,10 @@
                     </div>
                     <div class="works-main-text">
                         <h2 class="title-h2 white underlined_text">
-                            Yammy is where
-                            <br>remote <span>works.</span>
+                            <span key="big_text">Yammy is where remote</span>
+                            <br> <span class="unde_line" key="underlined">works.</span>
                         </h2>
-                        <p class="desc-1 white">
+                        <p class="desc-1 white" key="works-desc">
                             Yammy is on a mission to remove any obstacles to working remotely. We provide the platform to hire the best sales experts, engage and maintain amazing customer relationships, and effectively manage remote teams from anywhere in the world.
                         </p>
                     </div>
@@ -423,10 +431,10 @@
                 <div class="works2-main">
                     <div class="works2-main-text">
                         <h2 class="title-h2 underlined_text">
-                            Yammy is where
-                            <br>remote <span>works.</span>
+                            <span key="big_text">Yammy is where remote</span>
+                            <br> <span class="unde_line" key="underlined">works.</span>
                         </h2>
-                        <p class="desc-1">
+                        <p class="desc-1" key="works-desc">
                             Yammy is on a mission to remove any obstacles to working remotely. We provide the platform to hire the best sales experts, engage and maintain amazing customer relationships, and effectively manage remote teams from anywhere in the world.
                         </p>
                     </div>
@@ -441,13 +449,13 @@
                             <img src="img/footer.svg" alt="">
                         </div>
                         <div class="footer-main-top-menu">
-                            <a href="#" class="label-1 white">Home</a>
-                            <a href="#" class="label-1 white">Product</a>
-                            <a href="#" class="label-1 white">Pricing</a>
-                            <a href="#" class="label-1 white">About</a>
+                            <a href="#home" class="label-1 white" key="home" rel='m_PageScroll2id'>Home</a>
+                            <a href="#product" class="label-1 white" key="product" rel='m_PageScroll2id'>Product</a>
+                            <a href="#pricing" class="label-1 white" key="pricing" rel='m_PageScroll2id'>Pricing</a>
+                            <a href="#about" class="label-1 white" key="about" rel='m_PageScroll2id'>About</a>
                         </div>
                         <div class="footer-main-top-social">
-                            <p class="label-1 white">
+                            <p class="label-1 white" key="follow_us">
                                 Follow us:
                             </p>
                             <a href="#">
@@ -458,7 +466,7 @@
                             </a>
                         </div>
                     </div>
-                    <p class="footer-copyright label-4">Copyright © 2020, Yammy.
+                    <p class="footer-copyright label-4" key="copyright">Copyright © 2020, Yammy.
                         All rights reserved.</p>
                 </div>
             </div>
