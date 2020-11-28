@@ -752,11 +752,14 @@ section
         max-width: gem(121)
         text-align: center
 @media all and (max-width: 768px)
+    .underlined_text span:after
+        bottom: gem(4)
     .header
         padding: gem(40) 0
         .menu_mobile
             display: flex
             position: fixed
+            left: -100%
             width: 100%
             padding-top: gem(80)
             // left: -100%
