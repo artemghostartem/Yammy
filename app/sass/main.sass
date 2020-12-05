@@ -148,11 +148,15 @@ section
 .header
     position: fixed
     z-index: 10
+    display: flex
+    align-items: center
+    // flex-direction: or
     width: 100%
     top: 0
     left: 0
     // padding-top: gem(24)
     transition: all 0.3s ease
+    height: 15vh
     .burger
         display: none
     .menu_mobile
@@ -289,7 +293,8 @@ section
 .opening
     &-section
         position: relative
-        padding-top: gem(180)
+        // padding-top: gem(180)
+        height: 100vh
     &-bgr
         position: absolute
         right: 0
@@ -297,7 +302,8 @@ section
         background: var(--color-blue)
         background-size: cover
         width: 35.5%
-        height: gem(810)
+        // height: gem(810)
+        height: 100vh
     &-dots
         position: absolute
         left: 0
@@ -311,6 +317,8 @@ section
         display: flex
         justify-content: space-between
         align-items: flex-start
+        height: 100vh
+        align-items: center
         &-text
             display: flex
             flex-direction: column
@@ -323,6 +331,7 @@ section
             display: flex
             width: gem(400)
             flex-direction: column
+            height: gem(500)
             // padding-bottom: gem(180)
 .carousel-nav
     display: flex
@@ -408,15 +417,16 @@ section
     box-shadow: 0 gem(4) gem(25) rgba(49, 197, 161, 0)
 .decor-section
     display: flex
-    margin-top: gem(110)
-    margin-bottom: gem(146)
+    height: 30vh
+    align-items: center
+    padding-bottom: gem(40)
     span
         margin: 0 gem(50)
 .crush
     &-section
         position: relative
         width: 100%
-        height: gem(765)
+        height: auto
         .carousel-nav
             flex-direction: row
             bottom: 0
@@ -428,17 +438,24 @@ section
         position: absolute
         right: 0
         top: 0
-        background: url(../img/bgr-crush.png) no-repeat
+        background: url(../img/bgr-crush-new.png) no-repeat
         background-size: 100% 100%
-        width: 100%
-        height: gem(765)
-        img
-            width: gem(1140)
-            height: gem(765)
+        width: 50%
+        height: 55vh
+        // img
+        //     width: gem(1140)
+        //     height: gem(765)
     &-bottom
-        margin-top: gem(102)
+        // margin-top: gem(102)
+        height: 85vh
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
         position: relative
         z-index: 10  
+        background: linear-gradient(180deg, #56C7FF 50%, #FFFFFF 50%)
+        background-size: 100% 100%
         &-title
             display: flex
             flex-direction: row
@@ -471,6 +488,7 @@ section
             transition: all 0.5s ease
     &-main
         display: flex
+        height: 55vh
         &-top
             display: flex
             width: 100%
@@ -536,8 +554,8 @@ section
 .brilliant
     &-section
         position: relative
-        height: gem(493)
-        margin-top: gem(317)
+        height: 85vh
+        // margin-top: gem(317)
         display: flex
         align-items: center
     &-bgr
@@ -547,7 +565,7 @@ section
         background: url(../img/brilliant-bgr.png) no-repeat
         background-size: cover
         width: 40%
-        height: gem(493)
+        height: 100%
     &-main
         display: flex
         justify-content: flex-end
@@ -567,7 +585,10 @@ section
             height: gem(319)
 .features
     &-section
-       padding-top: gem(50)
+       // padding-top: gem(50)
+       height: 85vh
+       display: flex
+       align-items: center
        background: var(--color-gray-1) no-repeat
     // &-bgr
     //     position: absolute
@@ -594,28 +615,32 @@ section
 
 .everything
     &-section
-        margin-top: gem(90)
-        padding-bottom: gem(58)
+        // margin-top: gem(90)
+        // padding-bottom: gem(58)
+        height: 85vh
+        display: flex
+        align-items: center
     &-bgr
         position: absolute
         left: 0
-        top: gem(179    )
+        // top: gem(200)
+        bottom: 0
         background: url(../img/everything-bgr.png) no-repeat
         background-size: cover
         width: 100%
-        height: gem(403)
+        height: 60vh
     &-main
         display: flex
         flex-direction: column
         h2
             width: 100%
             text-align: center
-            margin-bottom: gem(60)
+            margin-bottom: gem(100)
         &-cards
             display: flex
             justify-content: space-between
             position: relative
-            bottom: gem(-116)
+            // bottom: gem(-116)
             &-element
                 display: flex
                 flex-direction: column
@@ -660,8 +685,11 @@ section
 .sponsors-section
     display: flex
     flex-direction: column
-    margin-top: gem(205)
-    margin-bottom: gem(54)
+    // margin-top: gem(205)
+    // margin-bottom: gem(54)
+    // align-items: center
+    justify-content: center
+    height: 42.5vh
     &-text
         span
             margin: 0 gem(50)
@@ -678,21 +706,27 @@ section
 .free
     &-section
         display: flex
+        height: 42.5vh
         flex-direction: column
+        justify-content: center
         align-items: center
         background: var(--color-blue)
-        padding: gem(73) 0 gem(90) 0
+        // padding: gem(73) 0 gem(90) 0
         h2
             margin-bottom: gem(30)
             text-align: center
 .remote
     &-section
         position: relative
-        padding-top: gem(180)
-        padding-bottom: gem(225)
-
+        height: 85vh
+        display: flex
+        align-items: center
+        padding-bottom: gem(100)
+        .mobile-pics
+            display: none
     &-main
         display: flex
+        align-items: center
         justify-content: space-between
         &-text
             display: flex
@@ -705,6 +739,9 @@ section
     &-section
         position: relative
         width: 100%
+        display: flex
+        align-items: center
+        height: 85vh
     &-bgr
         position: absolute
         right: 0
@@ -712,7 +749,7 @@ section
         background: url(../img/works-bgr.png) no-repeat
         background-size: 100% 100%
         width: 100%
-        height: gem(900)
+        height: 85vh
         z-index: -2
     &-big_pics
         display: flex
@@ -732,11 +769,13 @@ section
         display: flex
         width: 100%
         justify-content: space-between
+        align-items: center
+        height: 85vh
         &-text
             display: flex
             flex-direction: column
-            margin-top: gem(511)
-            max-width: gem(377)
+            // margin-top: gem(511)
+            max-width: gem(400)
             h2
                 max-width: gem(271)
             p
@@ -747,13 +786,16 @@ section
             display: flex
             position: absolute
             right: 0
-            bottom: 0
+            bottom: unset
             width: gem(570)
             height: gem(360)
 .works2
     &-section
         position: relative
-        margin: gem(185) 0
+        // margin: gem(185) 0
+        height: 85vh
+        display: flex
+        align-items: center
     &-main
         display: flex
         justify-content: space-between
@@ -828,6 +870,7 @@ section
         bottom: gem(4)
     .header
         padding: gem(40) 0
+        height: auto
         .menu_mobile
             display: flex
             position: fixed
@@ -953,17 +996,24 @@ section
         width: gem(68)
     .opening
         &-section
-            padding-top: gem(160)
+            // padding-top: gem(160)
+            height: auto
         &-bgr
             width: gem(132)
-            height: gem(520)
+            height: gem(580)
             top: unset
-            bottom: gem(50)
+            bottom: gem(26)
         &-main
             flex-direction: column
+            height: auto
             &-text
                 align-items: center
-                margin-bottom: gem(55)
+                display: flex
+                flex-direction: column
+                justify-content: center
+                // margin-bottom: gem(55)
+                height: 100vh
+                top: 0
                 h1, p
                     text-align: center
                 p
@@ -971,20 +1021,24 @@ section
                     margin-bottom: gem(55)
             &-pics
                 width: gem(327)
+                justify-content: center
                 height: auto
+                padding-top: gem(60)
         &-dots
             display: none
     .decor-section
-        margin-top: gem(-5)
-        margin-bottom: gem(5)
+        height: auto
+        margin-top: gem(53)
+        margin-bottom: gem(-38)
     .crush-bgr
         width: gem(375)
         height: gem(560)
-        top: unset
-        bottom: gem(-115)
+        top: gem(320)
+        bottom: unset
         background-image: url(../img/bgr-crush-mobile.png)
         
     .crush-main
+        height: auto
         &-top
             flex-direction: column
 
@@ -1004,6 +1058,8 @@ section
                 top: gem(75)
     .crush-bottom
         margin-top: gem(47)
+        background: none
+        height: auto
     .crush-section .carousel-nav
         right: 0
     .crush-bottom .crush-carousel
@@ -1026,7 +1082,7 @@ section
     .brilliant
         &-section
             height: auto
-            margin-top: gem(251)
+            margin-top: gem(28)
         &-bgr
             width: gem(243)
             height: gem(278)
@@ -1046,6 +1102,10 @@ section
                 width: gem(327)
                 height: gem(229)
                 margin-bottom: gem(26)
+    .features
+        &-section
+            height: auto
+            padding-top: gem(50)
     .features-main-element
         width: 100%
         max-width: unset
@@ -1053,6 +1113,8 @@ section
         p
             text-align: center
     .everything
+        &-section
+            height: auto
         &-bgr
             width: 100%
             height: gem(1263)
@@ -1060,42 +1122,55 @@ section
             bottom: 0
         &-main
             h2
-                margin-bottom: gem(60)
+                margin-bottom: gem(100)
+                margin-top: gem(116)
         &-main-cards
             flex-direction: column
-            bottom: gem(-30)
+            margin-bottom: gem(27)
             &-element
                 width: 100%
                 height: gem(371)
                 margin-bottom: gem(25)
     .sponsors-section
-        margin-top: gem(70)
+        margin-top: gem(50  )
+        height: auto
         margin-bottom: gem(40)
         &-pics
-            margin-top: gem(40)
+            margin-top: gem(20)
             img:nth-child(2)
                 margin-right: gem(5)
             img:nth-child(3)
                 margin-left: gem(5)
     .free-section
+        height: auto
         padding: gem(50) 0
     .remote
         &-section
             padding-top: gem(100)
             padding-bottom: 0
+            height: auto
+            position: relative
+            z-index: 6
+            .desc-pics
+                display: none
+            .mobile-pics
+                display: flex
         &-main
             flex-direction: column
             &-text
                 align-items: center
-                margin-bottom: gem(55)
+                margin-bottom: gem(25)
                 h2, p
                     text-align: center
     .works-section
         display: flex
         align-items: center
         flex-direction: column
+        height: auto
     .works-bgr
         height: gem(740)
+        background-size: cover
+        top: gem(-170)
     .works-big_pics
         width: gem(327)
         height: gem(222)
@@ -1106,8 +1181,10 @@ section
         position: relative
         width: gem(327)
         height: gem(206)
+    .works-main
+        height: auto
     .works-main-text
-        margin-top: gem(247)
+        margin-top: gem(80)
         h2, p
             text-align: center 
         h2
@@ -1120,6 +1197,7 @@ section
         margin-bottom: gem(100)
         align-items: center
         margin-top: 0
+        height: auto
     .works2-main-text
         margin-top: gem(80)
         h2, p
