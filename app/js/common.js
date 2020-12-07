@@ -68,20 +68,21 @@ let header = $('header')
     $('.opening-section .carousel-next').on('click', function() {
         owlHero.trigger('next.owl.carousel');
     })
+    
     // carousel crush
+
     let owlCrush = $('.crush-carousel')
     owlCrush.owlCarousel({
-        items: 3,
         loop: false,
         nav: false,
         dots: false,
         center: false,
-        mouseDrag: false,
-        touchDrag: false,
-        pullDrag: false,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
             768: {
                 items: 3
@@ -90,41 +91,56 @@ let header = $('header')
     })
 
 
-
-    //carouselProgressBar
-    let j = 1
     let progressBarLine = document.querySelector('.blue-line')
     let owlChildrens = document.querySelectorAll('.crush-carousel .owl-item')
     let owlChildrensLength = owlChildrens.length
-    let actives = 2
-    if (window.innerWidth > 768) {
-        actives = 2
-    } else {
-        actives = 1
-    }
+    let actives
+    //carouselProgressBar
+   
+
     function progressBar() {
-        let initialwith = 100 / (owlChildrens.length - actives)
-        let newWidth = initialwith * j
-        progressBarLine.style.width = `${newWidth}%`
+        let i
+        setTimeout(function(){
+            for ( i = 0; i < owlChildrensLength; i++) {
+                
+                if (owlChildrens[i].classList.contains('active')) {
+                    console.log(i);
+                    actives = i +1
+                    console.log(actives)
+                    let initialwith
+                    if (window.innerWidth > 768) {
+                        initialwith = 100/3
+                    } else {
+                        initialwith = 100/4
+                    }
+                    
+                    let newWidth = initialwith * actives
+                    progressBarLine.style.width = `${newWidth}%`
+
+                    break
+                }
+
+            }
+        },100)
+        
+        
     }
+    owlCrush.on('changed.owl.carousel', function(event) {
+        progressBar()
+       
+    })
 
     progressBar()
+       
 
     $('.crush-section .carousel-prev').on('click', function() {
         
-        if (j > 1) {
-        	j--
-        	progressBar()
-            owlCrush.trigger('prev.owl.carousel');
-        }
+        owlCrush.trigger('prev.owl.carousel');
     })
     $('.crush-section .carousel-next').on('click', function() {
         
-        if (j < (owlChildrens.length - actives)) {
-            j++
-            progressBar()
-            owlCrush.trigger('next.owl.carousel');
-        }
+
+        owlCrush.trigger('next.owl.carousel');
     })
 
 
@@ -183,7 +199,12 @@ let header = $('header')
     });
     function offsetCustom() {
         let header = document.querySelector('header')
-        let offset = header.offsetHeight-1
+        let offset
+        if (window.innerWidth > 768) {
+            offset = header.offsetHeight-1
+        } else {
+            offset = 0 
+        }
         return offset;
     }
     //mobile-menu
